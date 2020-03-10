@@ -13,8 +13,8 @@
 <?php: while ( have_posts() ): the_post(); ?>
       <a href="#" class="blog-content">
         <h3 class="blog-content__tag"><a href="#">Blog1</a></h3>
-        <h3 class="blog-content__title">コーヒーを飲みに行きました</h3>
-        <h3 class="blog-content__date">2020&nbsp;someday</h3>
+        <h3 class="blog-content__title"><?php the_title(); ?></h3>
+        <h3 class="blog-content__date"><?php the_time('Y/n/j'); ?></h3>
         <div class="blog-content__img">
 <?php if(has_post_thumbnail()) {
 the_post_thumbnail('large');
